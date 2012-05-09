@@ -2,16 +2,19 @@ html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-
 
 body{
   color:#444;
-  font-family:Georgia, Palatino, 'Palatino Linotype', Times,
-              'Times New Roman', serif,
-              "Hiragino Sans GB", "STXihei", "微软雅黑";
+  font-family: Monaco, Georgia, Palatino, 'Palatino Linotype', Times,
+            'Times New Roman', serif,
+            "Hiragino Sans GB", "STXihei", "微软雅黑";
   font-size:12px;
   line-height:1.5em;
   background:#fefefe;
+  background:#ddd;
   width: 45em;
   margin: 80px auto;
   padding: 5em 5em;
   outline: 1300px solid #FAFAFA;
+  outline: 1300px solid #555;
+  box-shadow: inset -2px -2px 2px #222, inset 2px 2px 2px #222
 }
 
 a{ color: #0645ad; text-decoration:none;}

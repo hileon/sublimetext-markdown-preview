@@ -37,10 +37,15 @@ class MarkdownPreviewCommand(sublime_plugin.TextCommand):
         markdown_html = markdown.markdown(contents)
 
         # build the html
-        html_contents = u'<meta charset="%s">' % self.view.encoding()
+        html_contents = u''
+        html_contents += u'<!DOCTYPE html>\n'
+        html_contents += u'<html>\n<head>\n'
+        html_contents += u'<meta charset="%s">' % self.view.encoding()
         styles = self.getCSS()
-        html_contents += '<style>%s</style>' % styles
+        html_contents += '\n<style>\n%s\n</style>' % styles
+        html_contents += u'\n</head>\n<body>\n'
         html_contents += markdown_html
+        html_contents += u'\n</body>\n</html>'
 
         # output
         if target == 'browser':
